@@ -14,13 +14,25 @@ module.exports = function(grunt) {
         options: {
           engine: 'im',
           sizes: [{
-            /*
-            Change these:
-            
-            width: ,
-            suffix: ,
-            quality:
-            */
+            name: 'small',
+            width: '320px',
+            // suffix: '_small',
+            quality: 20
+          },{
+            name: 'medium',
+            width: '640px',
+            // suffix: '_medium',
+            quality: 40
+          },{
+            name: 'large',
+            width: '800px',
+            // suffix: '_large',
+            quality: 60
+          },{
+            name: 'large2x',
+            width: '1600px',
+            // suffix: '_large',
+            quality: 60
           }]
         },
 
@@ -36,6 +48,7 @@ module.exports = function(grunt) {
         }]
       }
     },
+
 
     /* Clear out the images directory if it exists */
     clean: {
